@@ -40,10 +40,14 @@ describe('Users', () => {
       var user = users.removeUser(userId);
       //console.log('user',user);
       expect(user.id).toBe(userId);
+
     });
 
     it('should not remove a user', () => {
-
+      var userId =33;
+      var user = users.removeUser(userId);
+      //console.log('user',user);
+      expect(user).toBeFalsy();
     });
 
     it('should find user', () =>{
@@ -53,7 +57,7 @@ describe('Users', () => {
         expect(user.id).toBe(userId);
     });
 
-    it('should nor find user', () =>{
+    it('should not find user', () =>{
       var userId =33;
       var user = users.getUser(userId);
       //console.log('user',user);
